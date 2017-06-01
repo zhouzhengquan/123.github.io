@@ -2,17 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <script>
-	dataLayer = [];
-	dataLayer.push({
-		'event': 'GA-event',
-	'graduate-year':'spring-2017',
-	'graduate-location':'Nanjing',
-	}
-	);
-
+window.dataLayer = window.dataLayer || []
 function dl_push(){
 dataLayer.push({
-	'event': 'GA-MAC',
    'transactionId': '1234',
    'transactionAffiliation': 'Acme Clothing',
    'transactionTotal': 38.26,
@@ -33,7 +25,6 @@ dataLayer.push({
    }]
 });
 }
-	
 </script>
 	
 	
