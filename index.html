@@ -13,6 +13,7 @@
 	
 <script>
 window.dataLayer = window.dataLayer || []
+function dl_push(){
 dataLayer.push({
    'transactionId': '1234',
    'transactionAffiliation': 'Acme Clothing',
@@ -33,6 +34,8 @@ dataLayer.push({
        'quantity': 2
    }]
 });
+}
+	
 </script>
 	
 	
@@ -272,6 +275,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<td>
 						<a href="http://www.jomalone.com.cn" target="_blank"><img src="css/images/logo5.gif" alt="" vale="Jo Malone"/></a>
 						</td>
+						<td>
+						<button onclick="dl_push">ecommerce</button>
 					 </tr>
 					 </table>
 					</div>
