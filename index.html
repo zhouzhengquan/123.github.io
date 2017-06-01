@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+ga('require', 'ecommerce');
 <script>
 window.dataLayer = window.dataLayer || []
 function dl_push(){
 dataLayer.push({
-   'event':'GA-MAC',
    'transactionId': '1234',
    'transactionAffiliation': 'Acme Clothing',
    'transactionTotal': 38.26,
@@ -267,6 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</td>
 						<td>
 						<button onclick="dl_push">ecommerce</button>
+						ga('ecommerce:send');
 					 </tr>
 					 </table>
 					</div>
