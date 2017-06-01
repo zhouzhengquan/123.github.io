@@ -3,17 +3,37 @@
 <head>
 
 <script>
-ga('require', 'ecommerce');
-ga('ecommerce:addTransaction', {
-  'id': '1234',                     // Transaction ID. Required.
-  'affiliation': 'Acme Clothing',   // Affiliation or store name.
-  'revenue': '11.99',               // Grand Total.
-  'shipping': '5',                  // Shipping.
-  'tax': '1.29'                     // Tax.
-});
-ga('ecommerce:send');
+    function dl_push(){
+            dataLayer.push({
+               'event': 'GA-MAC',
+                'eventCategory':'category',
+                'eventAction':'action',
+               'eventLabel':'label',
+               'brandOwner':'Roger',
+                'eventValue':'666',
+                   'transactionId': '1234',
+   'transactionAffiliation': 'Acme Clothing',
+   'transactionTotal': 38.26,
+   'transactionTax': 1.29,
+   'transactionShipping': 5,
+
+   'transactionProducts': [{
+       'sku': 'DD44',
+       'name': 'T-Shirt',
+       'category': 'Apparel',
+       'price': 11.99,
+       'quantity': 1
+   },{
+       'sku': 'AA1243544',
+       'name': 'Socks',
+       'category': 'Apparel',
+       'price': 9.99,
+       'quantity': 2
+   }]
+                
+            });
+      }
 </script>
-	
 	
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -253,7 +273,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						</td>
 						<td>
 						<button onclick="dl_push">ecommerce</button>
-						ga('ecommerce:send');
 					 </tr>
 					 </table>
 					</div>
