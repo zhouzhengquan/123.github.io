@@ -1,0 +1,83 @@
+<head>
+<script src="ecommerce_dl_event.js"></script>
+  <script>
+    var chars = ['0','1','2','3','4','5','6','7','8','9'];
+
+function generateMixed(n) {
+     var res = "";
+     for(var i = 0; i < n ; i ++) {
+         var id = Math.ceil(Math.random()*9);
+         res += chars[id];
+     }
+     return res;
+}
+
+var User_ID_generator = generateMixed(10)
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+                'page': {
+                     'type': 'home'
+                },
+                'user': {
+                'registered':'false',
+                'status': 'logged-in',
+                'id': User_ID_generator
+                },
+                'site': {
+                'environment': 'live'
+                },
+                'ecommerce': {
+                    'impressions': product_list,
+                    'currencyCode': 'CNY', 
+              }
+            });
+    </script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-52GV84S');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52GV84S"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<script>
+    function dl_push(){
+            dataLayer.push({
+                'event': 'GA-event',
+                "eventDetail": { 
+                  'category': 'category', 
+                  'action': 'action', 
+                  'label': 'label', 
+                  'value': '123',
+                },
+                'page': {
+                    'type': 'home'
+                },
+                'user': {
+                'registered':'false',
+                'status': 'logged-out',
+                'id': '12345'
+                },
+                'site': {
+                'environment': 'live'
+                }
+            });
+      }
+</script>
+  <button onclick="ecommerce_product_detail()">view detail</button>
+   <button onclick="promotion_click()">promotion click</button>
+  <button onclick="promotion_view()">promotion view</button>
+   <button onclick="ecommerce_add_to_cart()">add to cart</button>
+  <button onclick="ecommerce_checkout_push1()">checkout1</button>
+   <button onclick="ecommerce_checkout_push2()">checkout2</button>
+      <button onclick="ecommerce_checkout_push3()">checkout3</button>
+  <button onclick="confirm_purchase()">purchase confirmation</button>
+<a href = "a.doc">a.doc</a>
+<a href = "http://www.baidu.com">baidu</a>
+
+</body>
