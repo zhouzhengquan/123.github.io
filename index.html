@@ -19,6 +19,43 @@ return {
 </head>
 <body>
 <!-- Top -->
+
+<script>
+  window.digitalData = {
+    version: "1.0",
+    page: {
+    attributes: {
+    'pageName' : "zhou test",
+            'pageUrl' : "${currentPage.path}",
+        },
+    },
+    user: {
+    'userName': "zzhou",
+        'userEmail': "zzhou@merkleinc.com",
+    },
+    event:[
+        {
+    eventInfo:{
+    'eventType': "",
+     'eventAction': "",
+           },
+        }
+    ]
+}
+</script>
+<script>
+if (typeof(digitalData.event) !='undefined'){
+digitalData.event.length = 0;
+}
+	digitalData.event.push({
+	eventInfo:{
+	    'eventType': "123",
+     'eventAction': "456",}
+		
+	})
+		_satellite.track(‘adobetest’);
+
+</script>
 <div id="top">
 	
 	<div class="shell">
